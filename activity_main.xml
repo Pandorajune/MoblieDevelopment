@@ -6,67 +6,56 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <TextView
-        android:id="@+id/tipTextView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Tip Amount"
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="222dp"
+        android:layout_height="399dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintHorizontal_bias="0.084"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.755" />
+        tools:srcCompat="@drawable/green_light" />
 
-    <TextView
-        android:id="@+id/totalTextView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Total Bill"
+    <RadioGroup
+        android:layout_width="112dp"
+        android:layout_height="188dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintHorizontal_bias="0.946"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.84" />
+        app:layout_constraintVertical_bias="0.498">
 
-    <EditText
-        android:id="@+id/billAmountEditText"
-        android:layout_width="244dp"
-        android:layout_height="54dp"
-        android:ems="10"
-        android:hint="Bill Amount"
-        android:inputType="textPersonName"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.292" />
+        <RadioButton
+            android:id="@+id/redRadioButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="monospace"
+            android:onClick="trafficLights"
+            android:text="Red"
+            android:textAlignment="viewStart"
+            android:textSize="20sp" />
 
-    <EditText
-        android:id="@+id/tipPercentageEditText"
-        android:layout_width="242dp"
-        android:layout_height="54dp"
-        android:ems="10"
-        android:hint="Tip Percentage"
-        android:inputType="textPersonName"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.437" />
+        <RadioButton
+            android:id="@+id/yellowRadioButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="monospace"
+            android:onClick="trafficLights"
+            android:text="Yellow"
+            android:textAlignment="viewStart"
+            android:textSize="20sp" />
 
-    <Button
-        android:id="@+id/calculateButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:onClick="calculateTip"
-        android:text="Calculate"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.6" />
+        <RadioButton
+            android:id="@+id/greenRadioButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="monospace"
+            android:onClick="trafficLights"
+            android:text="Green"
+            android:textAlignment="viewStart"
+            android:textSize="20sp" />
+
+    </RadioGroup>
 </androidx.constraintlayout.widget.ConstraintLayout>
