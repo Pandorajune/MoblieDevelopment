@@ -2,57 +2,217 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
+    android:layout_width="wrap_content"
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <ImageView
-        android:id="@+id/diceThreeImage"
-        android:layout_width="124dp"
-        android:layout_height="123dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.475"
-        tools:srcCompat="@drawable/one" />
 
     <ImageView
-        android:id="@+id/diceOneImage"
-        android:layout_width="124dp"
-        android:layout_height="123dp"
+        android:id="@+id/graphImageView"
+        android:layout_width="408dp"
+        android:layout_height="379dp"
+        android:clickable="false"
+        android:contentDescription="graph"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.182"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.131"
-        tools:srcCompat="@drawable/one" />
-
-    <ImageView
-        android:id="@+id/diceTwoImage"
-        android:layout_width="124dp"
-        android:layout_height="123dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.818"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.131"
-        tools:srcCompat="@drawable/one" />
+        tools:srcCompat="@drawable/board" />
 
     <Button
-        android:id="@+id/rollDiceButton"
-        android:layout_width="138dp"
-        android:layout_height="65dp"
-        android:onClick="onClick"
-        android:text="Roll Dice"
+        android:id="@+id/playAgainButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="restart"
+        android:text="Play Again"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintHorizontal_bias="0.968"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.762" />
+        app:layout_constraintVertical_bias="0.987" />
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout"
+        android:layout_width="118dp"
+        android:layout_height="118dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.055"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.249">
+
+        <ImageView
+            android:id="@+id/imageView1"
+            android:layout_width="112dp"
+            android:layout_height="104dp"
+            android:contentDescription="TL"
+            android:onClick="onImageClick"
+            app:srcCompat="@drawable/whitegamepiece" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout2"
+        android:layout_width="116dp"
+        android:layout_height="119dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.506"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.25">
+
+        <ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="112dp"
+            android:layout_height="104dp"
+            android:contentDescription="TM"
+            android:onClick="onImageClick"
+            app:srcCompat="@drawable/whitegamepiece" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout8"
+        android:layout_width="117dp"
+        android:layout_height="119dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.975"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.25">
+
+        <ImageView
+            android:id="@+id/imageView3"
+            android:layout_width="112dp"
+            android:layout_height="104dp"
+            android:contentDescription="TR"
+            android:onClick="onImageClick"
+            app:srcCompat="@drawable/whitegamepiece" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout5"
+        android:layout_width="123dp"
+        android:layout_height="115dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.056"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.504">
+
+        <ImageView
+            android:id="@+id/imageView4"
+            android:layout_width="112dp"
+            android:layout_height="104dp"
+            android:contentDescription="ML"
+            android:onClick="onImageClick"
+            app:srcCompat="@drawable/whitegamepiece" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout3"
+        android:layout_width="117dp"
+        android:layout_height="115dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.505"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.504">
+
+        <ImageView
+            android:id="@+id/imageView5"
+            android:layout_width="112dp"
+            android:layout_height="104dp"
+            android:contentDescription="M"
+            android:onClick="onImageClick"
+            app:srcCompat="@drawable/whitegamepiece" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout6"
+        android:layout_width="125dp"
+        android:layout_height="112dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.975"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.505">
+
+        <ImageView
+            android:id="@+id/imageView6"
+            android:layout_width="112dp"
+            android:layout_height="104dp"
+            android:contentDescription="MR"
+            android:onClick="onImageClick"
+            app:srcCompat="@drawable/whitegamepiece" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout4"
+        android:layout_width="123dp"
+        android:layout_height="119dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.056"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.768">
+
+        <ImageView
+            android:id="@+id/imageView7"
+            android:layout_width="112dp"
+            android:layout_height="104dp"
+            android:contentDescription="BL"
+            android:onClick="onImageClick"
+            app:srcCompat="@drawable/whitegamepiece" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout7"
+        android:layout_width="109dp"
+        android:layout_height="120dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.494"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.782">
+
+        <ImageView
+            android:id="@+id/imageView8"
+            android:layout_width="112dp"
+            android:layout_height="104dp"
+            android:contentDescription="BM"
+            android:onClick="onImageClick"
+            app:srcCompat="@drawable/whitegamepiece" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="123dp"
+        android:layout_height="119dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.968"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.768">
+
+        <ImageView
+            android:id="@+id/imageView9"
+            android:layout_width="112dp"
+            android:layout_height="104dp"
+            android:contentDescription="BR"
+            android:onClick="onImageClick"
+            app:srcCompat="@drawable/whitegamepiece" />
+    </RelativeLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
