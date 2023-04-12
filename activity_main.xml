@@ -6,132 +6,222 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <TableLayout
+    <EditText
+        android:id="@+id/nameEditText"
+        android:layout_width="232dp"
+        android:layout_height="57dp"
+        android:ems="10"
+        android:hint="Name"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.029" />
+
+    <EditText
+        android:id="@+id/phoneNumberEditText"
+        android:layout_width="230dp"
+        android:layout_height="70dp"
+        android:ems="10"
+        android:hint="Phone Number"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.136" />
+
+    <CheckBox
+        android:id="@+id/pepperoniCheckBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Pepperoni"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.572" />
+
+    <CheckBox
+        android:id="@+id/sausageCheckBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Sausage"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.384"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.567" />
+
+    <CheckBox
+        android:id="@+id/oliveCheckBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Olives"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.671"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.571" />
+
+    <CheckBox
+        android:id="@+id/mushroomCheckBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Mushrooms"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.976"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.571" />
+
+    <CheckBox
+        android:id="@+id/greenPepperCheckBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Green Peppers"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.657" />
+
+    <CheckBox
+        android:id="@+id/pineappleCheckBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Pineapples"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.403"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.657" />
+
+    <CheckBox
+        android:id="@+id/onionCheckBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Onion"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.667"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.657" />
+
+    <CheckBox
+        android:id="@+id/extraCheeseCheckBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Extra Cheese"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.655" />
+
+    <Button
+        android:id="@+id/completeOrderButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="onCompleteButton"
+        android:text="Complete Order"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.971" />
+
+    <TextView
+        android:id="@+id/orderSummaryTextView"
+        android:layout_width="197dp"
+        android:layout_height="64dp"
+        android:layout_marginStart="120dp"
+        android:layout_marginEnd="94dp"
+        android:text="Order Summary"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.829" />
+
+    <RadioGroup
+        android:id="@+id/sizeRadioGroup"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.342">
 
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="132dp">
+        <RadioButton
+            android:id="@+id/smallPizzaButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Small"
+            tools:layout_editor_absoluteX="17dp"
+            tools:layout_editor_absoluteY="177dp" />
 
-            <ImageView
-                android:id="@+id/imageView"
-                android:layout_width="99dp"
-                android:layout_height="96dp"
-                android:contentDescription="card"
-                android:onClick="onClick"
-                tools:srcCompat="@drawable/question_mark" />
+        <RadioButton
+            android:id="@+id/mediumPizzaButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Medium" />
 
-            <ImageView
-                android:id="@+id/imageView2"
-                android:layout_width="99dp"
-                android:layout_height="96dp"
-                android:contentDescription="card"
-                android:onClick="onClick"
-                tools:srcCompat="@drawable/question_mark" />
+        <RadioButton
+            android:id="@+id/largePizzaButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Large"
+            tools:layout_editor_absoluteX="17dp"
+            tools:layout_editor_absoluteY="273dp" />
+    </RadioGroup>
 
-            <ImageView
-                android:id="@+id/imageView3"
-                android:layout_width="99dp"
-                android:layout_height="96dp"
-                android:contentDescription="card"
-                android:onClick="onClick"
-                tools:srcCompat="@drawable/question_mark" />
+    <RadioGroup
+        android:id="@+id/crustRadioGroup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.974"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.342">
 
-        </TableRow>
+        <RadioButton
+            android:id="@+id/regularCrustButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Regular Crust"
+            tools:layout_editor_absoluteX="261dp"
+            tools:layout_editor_absoluteY="180dp" />
 
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
+        <RadioButton
+            android:id="@+id/thinCrustButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Thin Crust" />
 
-            <ImageView
-                android:id="@+id/imageView4"
-                android:layout_width="99dp"
-                android:layout_height="96dp"
-                android:contentDescription="card"
-                android:onClick="onClick"
-                tools:srcCompat="@drawable/question_mark" />
-
-            <ImageView
-                android:id="@+id/imageView5"
-                android:layout_width="99dp"
-                android:layout_height="96dp"
-                android:contentDescription="card"
-                android:onClick="onClick"
-                tools:srcCompat="@drawable/question_mark" />
-
-            <ImageView
-                android:id="@+id/imageView6"
-                android:layout_width="99dp"
-                android:layout_height="96dp"
-                android:contentDescription="card"
-                android:onClick="onClick"
-                tools:srcCompat="@drawable/question_mark" />
-
-        </TableRow>
-
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
-
-            <ImageView
-                android:id="@+id/imageView7"
-                android:layout_width="99dp"
-                android:layout_height="96dp"
-                android:contentDescription="card"
-                android:onClick="onClick"
-                tools:srcCompat="@drawable/question_mark" />
-
-            <ImageView
-                android:id="@+id/imageView8"
-                android:layout_width="99dp"
-                android:layout_height="96dp"
-                android:contentDescription="card"
-                android:onClick="onClick"
-                tools:srcCompat="@drawable/question_mark" />
-
-            <ImageView
-                android:id="@+id/imageView9"
-                android:layout_width="99dp"
-                android:layout_height="96dp"
-                android:contentDescription="card"
-                android:onClick="onClick"
-                tools:srcCompat="@drawable/question_mark" />
-        </TableRow>
-
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="123dp">
-
-            <ImageView
-                android:id="@+id/imageView10"
-                android:layout_width="99dp"
-                android:layout_height="96dp"
-                android:contentDescription="card"
-                android:onClick="onClick"
-                tools:srcCompat="@drawable/question_mark" />
-
-            <ImageView
-                android:id="@+id/imageView11"
-                android:layout_width="99dp"
-                android:layout_height="96dp"
-                android:contentDescription="card"
-                android:onClick="onClick"
-                tools:srcCompat="@drawable/question_mark" />
-
-            <ImageView
-                android:id="@+id/imageView12"
-                android:layout_width="99dp"
-                android:layout_height="96dp"
-                android:contentDescription="card"
-                android:onClick="onClick"
-                tools:srcCompat="@drawable/question_mark" />
-
-        </TableRow>
-    </TableLayout>
+        <RadioButton
+            android:id="@+id/deepDishButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Deep-Dish Crust"
+            tools:layout_editor_absoluteX="261dp"
+            tools:layout_editor_absoluteY="276dp" />
+    </RadioGroup>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
