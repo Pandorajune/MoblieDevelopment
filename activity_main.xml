@@ -2,217 +2,71 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="wrap_content"
+    android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-
-    <ImageView
-        android:id="@+id/graphImageView"
-        android:layout_width="408dp"
-        android:layout_height="379dp"
-        android:clickable="false"
-        android:contentDescription="graph"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:srcCompat="@drawable/board" />
-
-    <Button
-        android:id="@+id/playAgainButton"
+    <TextView
+        android:id="@+id/tipTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:onClick="restart"
-        android:text="Play Again"
+        android:text="Tip Amount"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.968"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.987" />
+        app:layout_constraintVertical_bias="0.755" />
 
-    <RelativeLayout
-        android:id="@+id/relativeLayout"
-        android:layout_width="118dp"
-        android:layout_height="118dp"
+    <TextView
+        android:id="@+id/totalTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Total Bill"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.055"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.249">
+        app:layout_constraintVertical_bias="0.84" />
 
-        <ImageView
-            android:id="@+id/imageView1"
-            android:layout_width="112dp"
-            android:layout_height="104dp"
-            android:contentDescription="TL"
-            android:onClick="onImageClick"
-            app:srcCompat="@drawable/whitegamepiece" />
-    </RelativeLayout>
-
-    <RelativeLayout
-        android:id="@+id/relativeLayout2"
-        android:layout_width="116dp"
-        android:layout_height="119dp"
+    <EditText
+        android:id="@+id/billAmountEditText"
+        android:layout_width="244dp"
+        android:layout_height="54dp"
+        android:ems="10"
+        android:hint="Bill Amount"
+        android:inputType="textPersonName"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.506"
+        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.25">
+        app:layout_constraintVertical_bias="0.292" />
 
-        <ImageView
-            android:id="@+id/imageView2"
-            android:layout_width="112dp"
-            android:layout_height="104dp"
-            android:contentDescription="TM"
-            android:onClick="onImageClick"
-            app:srcCompat="@drawable/whitegamepiece" />
-
-    </RelativeLayout>
-
-    <RelativeLayout
-        android:id="@+id/relativeLayout8"
-        android:layout_width="117dp"
-        android:layout_height="119dp"
+    <EditText
+        android:id="@+id/tipPercentageEditText"
+        android:layout_width="242dp"
+        android:layout_height="54dp"
+        android:ems="10"
+        android:hint="Tip Percentage"
+        android:inputType="textPersonName"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.975"
+        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.25">
+        app:layout_constraintVertical_bias="0.437" />
 
-        <ImageView
-            android:id="@+id/imageView3"
-            android:layout_width="112dp"
-            android:layout_height="104dp"
-            android:contentDescription="TR"
-            android:onClick="onImageClick"
-            app:srcCompat="@drawable/whitegamepiece" />
-    </RelativeLayout>
-
-    <RelativeLayout
-        android:id="@+id/relativeLayout5"
-        android:layout_width="123dp"
-        android:layout_height="115dp"
+    <Button
+        android:id="@+id/calculateButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="calculateTip"
+        android:text="Calculate"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.056"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.504">
-
-        <ImageView
-            android:id="@+id/imageView4"
-            android:layout_width="112dp"
-            android:layout_height="104dp"
-            android:contentDescription="ML"
-            android:onClick="onImageClick"
-            app:srcCompat="@drawable/whitegamepiece" />
-
-    </RelativeLayout>
-
-    <RelativeLayout
-        android:id="@+id/relativeLayout3"
-        android:layout_width="117dp"
-        android:layout_height="115dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.505"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.504">
-
-        <ImageView
-            android:id="@+id/imageView5"
-            android:layout_width="112dp"
-            android:layout_height="104dp"
-            android:contentDescription="M"
-            android:onClick="onImageClick"
-            app:srcCompat="@drawable/whitegamepiece" />
-    </RelativeLayout>
-
-    <RelativeLayout
-        android:id="@+id/relativeLayout6"
-        android:layout_width="125dp"
-        android:layout_height="112dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.975"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.505">
-
-        <ImageView
-            android:id="@+id/imageView6"
-            android:layout_width="112dp"
-            android:layout_height="104dp"
-            android:contentDescription="MR"
-            android:onClick="onImageClick"
-            app:srcCompat="@drawable/whitegamepiece" />
-
-    </RelativeLayout>
-
-    <RelativeLayout
-        android:id="@+id/relativeLayout4"
-        android:layout_width="123dp"
-        android:layout_height="119dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.056"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.768">
-
-        <ImageView
-            android:id="@+id/imageView7"
-            android:layout_width="112dp"
-            android:layout_height="104dp"
-            android:contentDescription="BL"
-            android:onClick="onImageClick"
-            app:srcCompat="@drawable/whitegamepiece" />
-    </RelativeLayout>
-
-    <RelativeLayout
-        android:id="@+id/relativeLayout7"
-        android:layout_width="109dp"
-        android:layout_height="120dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.494"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.782">
-
-        <ImageView
-            android:id="@+id/imageView8"
-            android:layout_width="112dp"
-            android:layout_height="104dp"
-            android:contentDescription="BM"
-            android:onClick="onImageClick"
-            app:srcCompat="@drawable/whitegamepiece" />
-    </RelativeLayout>
-
-    <RelativeLayout
-        android:layout_width="123dp"
-        android:layout_height="119dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.968"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.768">
-
-        <ImageView
-            android:id="@+id/imageView9"
-            android:layout_width="112dp"
-            android:layout_height="104dp"
-            android:contentDescription="BR"
-            android:onClick="onImageClick"
-            app:srcCompat="@drawable/whitegamepiece" />
-    </RelativeLayout>
-
+        app:layout_constraintVertical_bias="0.6" />
 </androidx.constraintlayout.widget.ConstraintLayout>
