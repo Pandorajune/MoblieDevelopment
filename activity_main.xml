@@ -4,109 +4,136 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#A4CDCD"
     tools:context=".MainActivity">
-
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="284dp"
-        android:layout_height="168dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.496"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.057"
-        app:srcCompat="@drawable/currency_symbols" />
 
     <Spinner
         android:id="@+id/spinner"
-        style="@android:style/Widget.Holo.Light.Spinner"
-        android:layout_width="383dp"
-        android:layout_height="48dp"
-        android:contentDescription="spinner"
-        android:gravity="center_horizontal"
+        android:layout_width="394dp"
+        android:layout_height="49dp"
+        android:backgroundTint="#FFFFFF"
+        android:outlineAmbientShadowColor="#000000"
+        android:outlineProvider="bounds"
+        android:outlineSpotShadowColor="#000000"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.619"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.576" />
+        app:layout_constraintVertical_bias="0.076" />
 
-    <TextView
-        android:id="@+id/convertedCurrency"
-        android:layout_width="237dp"
-        android:layout_height="50dp"
-        android:text="Converted Currency"
-        android:textAlignment="center"
-        android:textSize="16sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.773" />
-
-    <TextView
-        android:id="@+id/typeOfCurrencey"
-        android:layout_width="196dp"
-        android:layout_height="22dp"
-        android:text="Type of Currency"
-        android:textAlignment="center"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.664" />
-
-    <Button
-        android:id="@+id/clearButton"
+    <ImageView
+        android:id="@+id/imageView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Clear"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.955"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.971" />
-
-
-    <Button
-        android:id="@+id/convertButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:onClick="Click"
-        android:text="Convert"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.045"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.971" />
-
-    <EditText
-        android:id="@+id/USD"
-        android:layout_width="244dp"
-        android:layout_height="52dp"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:text="US Dollars"
-        android:textAlignment="center"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.43" />
-
-    <TextView
-        android:id="@+id/textView3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Please Select A Currency Type Below"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.517" />
+        app:layout_constraintVertical_bias="0.332"
+        tools:srcCompat="@tools:sample/avatars" />
+
+    <TableLayout
+        android:layout_width="410dp"
+        android:layout_height="154dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.694">
+
+        <TableRow
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            tools:layout_editor_absoluteX="63dp"
+            tools:layout_editor_absoluteY="326dp">
+
+            <Button
+                android:id="@+id/excuseme"
+                android:layout_width="200dp"
+                android:layout_height="match_parent"
+                android:autoText="false"
+                android:onClick="click"
+                android:text="Excuse me"
+                android:textAlignment="viewStart"
+                android:textSize="12sp"
+                tools:layout_editor_absoluteX="63dp"
+                tools:layout_editor_absoluteY="326dp"
+                />
+
+            <Button
+                android:id="@+id/ineedahotel"
+                android:layout_width="200dp"
+                android:layout_height="match_parent"
+                android:autoText="false"
+                android:onClick="click"
+                android:text="I need a Hotel"
+                android:textAlignment="viewStart"
+                android:textSize="12sp"
+                tools:layout_editor_absoluteX="252dp"
+                tools:layout_editor_absoluteY="326dp" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:layout_editor_absoluteX="63dp"
+            tools:layout_editor_absoluteY="374dp">
+
+            <Button
+                android:id="@+id/ineedataxi"
+                android:layout_width="200dp"
+                android:layout_height="match_parent"
+                android:autoText="false"
+                android:onClick="click"
+                android:text="I need a Taxi"
+                android:textAlignment="viewStart"
+                android:textSize="12sp"
+                tools:layout_editor_absoluteX="63dp"
+                tools:layout_editor_absoluteY="374dp" />
+
+            <Button
+                android:id="@+id/howareyou"
+                android:layout_width="200dp"
+                android:layout_height="match_parent"
+                android:autoText="false"
+                android:onClick="click"
+                android:text="How are you?"
+                android:textAlignment="viewStart"
+                android:textSize="12sp" />
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <Button
+                android:id="@+id/howdoigettotheariport"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:onClick="click"
+                android:text="How Do I get to the Airport?"
+                android:textAlignment="viewStart"
+                android:textSize="12sp"
+                tools:layout_editor_absoluteX="158dp"
+                tools:layout_editor_absoluteY="374dp" />
+
+            <Button
+                android:id="@+id/whendoesthetrainleave"
+                android:layout_width="10dp"
+                android:layout_height="match_parent"
+                android:autoText="false"
+                android:onClick="click"
+                android:text="When does the train leave?"
+                android:textAlignment="viewStart"
+                android:textSize="12sp"
+                tools:layout_editor_absoluteX="252dp"
+                tools:layout_editor_absoluteY="374dp" />
+        </TableRow>
+
+    </TableLayout>
+
 </androidx.constraintlayout.widget.ConstraintLayout>
